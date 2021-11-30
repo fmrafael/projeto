@@ -1,0 +1,30 @@
+{% extends "blog/base.html" %}
+
+{% block title %} meu blog {% endblock %}
+
+{% block content %}
+
+{% for post in post_list %}
+
+<article>
+<a href="{{post.get_absolute_url}}">
+<h1> {{post.title}} </h1>
+</a>
+
+<img> {{post.photo}} </img>
+<h2> {{post.subheading1}} </h2>
+<p> {{post.body1}} </p>
+
+<h2> {{post.subheading2}} </h2>
+<p> {{post.body2}} </p>
+
+<h2> {{post.subheading3}} </h2>
+<p> {{post.body3}} </p>
+<h2> {{post.conclusion}} </h2>
+<p> {{post.created}} </p>
+
+</article>
+
+{% endfor %}
+{% endblock %}
+
