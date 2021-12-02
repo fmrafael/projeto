@@ -5,18 +5,22 @@ from django.urls import reverse
 
 class Post(models.Model):
   title = models.CharField(max_length = 255)
-  photo = models.ImageField(upload_to='blog', blank=True)
+  photo_title = models.ImageField(upload_to='images', blank=True)
   subheading1 = models.CharField(max_length = 255, blank=True)
   body1 = models.TextField(blank=True)
+  photo_body1 = models.ImageField(upload_to='images', blank=True)
   subheading2 = models.CharField(max_length = 255, blank=True)
   body2 = models.TextField(blank=True)
+  photo_body2 = models.ImageField(upload_to='images', blank=True)
   subheading3 = models.CharField(max_length = 255, blank=True)
   body3 = models.TextField(blank=True)
   conclusion = models.CharField(max_length = 255, blank=True)
+  photo_body3 = models.ImageField(upload_to='images', blank=True)
   slug = models.SlugField(max_length=255, unique=True)
   author = models.ForeignKey(User, on_delete=models.CASCADE)
   created = models.DateTimeField(auto_now_add=True)
   updated = models.DateTimeField(auto_now=True)
+  
 
   class Meta:
     ordering = ("-created",)
@@ -26,4 +30,9 @@ class Post(models.Model):
   
   def get_absolute_url(self):
     return reverse("blog:detail", kwargs={"slug":self.slug})
+  
+  @property
+  def image_url(self):
+    if self.image and hasattr(self.image, 'url'):
+        return self.image.url
     

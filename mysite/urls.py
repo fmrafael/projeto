@@ -1,5 +1,4 @@
 """mysite URL Configuration
-
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.0/topics/http/urls/
 Examples:
@@ -13,10 +12,22 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+
 from django.contrib import admin
 from django.urls import include, path
+from django.conf.urls.static import static
+from django.conf import settings
+from blog.views import home_view, policy_view
 
-urlpatterns = [
+
+
+urlpatterns = [ 
+  path('', home_view, name='home'),
     path('admin/', admin.site.urls),
     path("blog/", include("blog.urls", namespace="blog")),
-]
+    path("", include("blog.urls", namespace="hometemp")),
+    path('policy', policy_view, name='policy'),
+
+     
+    
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

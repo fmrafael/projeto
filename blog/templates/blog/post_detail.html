@@ -1,25 +1,45 @@
 {% extends "blog/base.html" %}
 
-{% block title %} meu blog {% endblock %}
+
+
+
+{% block title %}  {% endblock %}
 
 {% block content %}
 
-<article>
 
-<h1> {{post.title}} </h1>
-<img> {{post.photo}} </img>
-<h2> {{post.subheading1}} </h2>
-<p> {{post.body1}} </p>
 
-<h2> {{post.subheading2}} </h2>
-<p> {{post.body2}} </p>
+<article class="mb-4">
+  <div class="container">
+          
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10">
+<h2 class="section-heading">{{post.title}}</h2>
+<img class="card-img-top" src="{{ post.photo_title.url }}" alt="Card image cap">
 
-<h2> {{post.subheading3}} </h2>
-<p> {{post.body3}} </p>
-<h2> {{post.conclusion}} </h2>
-<p> {{post.created}} </p>
 
-</article>
+                      
+                        <p> {{post.body1}} </p>
+                        <h3> {{post.subheading1}} </h3>
+                        <img src="{{ photo_body1.image_url|default_if_none:'' }}"" alt="">
+                        <h3 class="section-heading">{{post.subheading2}}</h3>
+                        <img class="card-img-top" src="{{ photo_body2.image_url|default_if_none:'' }}" alt="">
+                        <p>{{post.body2}}</p>
+                        <blockquote class="blockquote"></blockquote>
+                         
+                        <h3 class="section-heading">{{post.subheading3}}</h3>
+                        <img class="card-img-top" src="{{ photo_body3.image_url|default_if_none:'' }}" alt="">
+                        <p>{{post.body3}}</p>
+                        
+                        <span class="caption text-muted"></span>
+                        <h2 class="section-heading">{{post.conclusion}}</h2>
+                          <p> {{post.created}} </p>
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </article>
 
 
 {% endblock %}
