@@ -26,7 +26,10 @@
         <div class="collapse navbar-collapse" id="navbarsExample07">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="{{post.get_absolute_url}}">Blog e Tutoriais <span class="sr-only"></span></a>
+              <a class="nav-link" href="{% url 'blog:post_list' %}">Blog e Tutoriais <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'affiliate' %}">Marketing afiliados<span class="sr-only"></span></a>
             </li>
           </ul>
         </div>
@@ -54,7 +57,7 @@
     	   <div class="col-xs-12 col-sm-6 col-md-4 footers-two">
     		    <h5>Nossos sites </h5>
     		    <ul class="list-unstyled">
-    			 <li><a href="{{post.get_absolute_url}}">Blog e tutoriais</a></li>
+    			 <li><a href="">Blog e tutoriais</a></li>
     			 <li><a href="contact.html"></a></li>
     			 <li><a href="about.html"></a></li>
     			 <li><a href="about.html"></a></li>

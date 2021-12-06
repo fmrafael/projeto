@@ -4,7 +4,9 @@ from .models import Post, TableAffiliate
 
 
 class PostListView(ListView):
+  queryset = Post.objects.filter(status=1).order_by('-created')
   model = Post
+  template_name = "blog/post_list.html"
 
 class PostDetailView(DetailView):
   model = Post

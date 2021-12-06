@@ -17,7 +17,7 @@ from django.contrib import admin
 from django.urls import include, path
 from django.conf.urls.static import static
 from django.conf import settings
-from blog.views import home_view, policy_view
+from blog.views import home_view, policy_view, affiliate_view
 
 
 
@@ -27,7 +27,7 @@ urlpatterns = [
     path("blog/", include("blog.urls", namespace="blog")),
     #path("", include("blog.urls", namespace="hometemp")),
     path('policy', policy_view, name='policy'),
-    path("blog/affiliate", policy_view, name="affiliate"),
+    path("blog/affiliate", affiliate_view, name="affiliate"),
 
      
     

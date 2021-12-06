@@ -3,6 +3,9 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 # Create your models here.
 
+STATUS = ( (0, "Draft"), (1, "Publish") )
+
+
 class Post(models.Model):
   title = models.CharField(max_length = 255)
   photo_title = models.ImageField(upload_to='images', blank=True)
@@ -17,14 +20,13 @@ class Post(models.Model):
   photo_body3 = models.ImageField(upload_to='images', blank=True)
   conclusion = models.CharField(max_length = 255, blank=True)
   post_links = models.CharField(max_length=255, blank=True)
-  
   slug = models.SlugField(max_length=255, unique=True)
   author = models.ForeignKey(User, on_delete=models.CASCADE)
   created = models.DateTimeField(auto_now_add=True)
   updated = models.DateTimeField(auto_now=True)
+  status = models.IntegerField(choices=STATUS, default=0)
   
-  
-
+    
   class Meta:
     ordering = ("-created",)
 
@@ -43,13 +45,13 @@ class Post(models.Model):
 class TableAffiliate(models.Model):
   photo_affiliate = models.ImageField(upload_to='images', blank=True)
   name_affiliate = models.TextField()
-  commission_affiliate = models.CharField(max_length = 200)
   website_affiliate = models.TextField()
-  category_affiliate = models.TextField()
+  commission_affiliate = models.CharField(max_length = 200)
+  category_affiliate = models.CharField(max_length = 255)
   author = models.ForeignKey(User, on_delete=models.CASCADE)
 
   def __str__(self):
-    return self.name
+    return self.name_affiliate
  
   
   
