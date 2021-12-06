@@ -1,8 +1,8 @@
 from django.views.generic import DetailView, ListView
 from django.shortcuts import render
+from .models import Post, TableAffiliate
 
 
-from .models import Post
 class PostListView(ListView):
   model = Post
 
@@ -17,4 +17,9 @@ def home_view(request, *args, **kwargs):
 
 def policy_view(request, *args, **kwargs):
   return render(request, "policy.html", {})
+
+
+def affiliate_view(request, *args, **kwargs):
+  get_affiliate = TableAffiliate.objects.all()
+  return render(request, "blog/affiliate.html", {"get_affiliate": get_affiliate} )
 
