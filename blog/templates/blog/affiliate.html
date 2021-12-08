@@ -1,69 +1,90 @@
-{% extends "blog/base.html" %} {% block title %} {% endblock %} {% block content %}
+{% extends "blog/base.html" %} {% block title %}Programa de Afiliados ativos em 2021/2022 {% endblock %} 
+
+{% block content %}
 
 <div class="main-content">
 	<div class="container mt-7">
-		<!-- Table -->
-		<h2 class="mb-5">Programa de Afiliados</h2>
-		<div class="row">
+		<h2 class="mb-5">Programa de Afiliados ativos em 2021/2022</h2>
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col"></th>
+					<th scope="col">Empresa</th>
+					<th scope="col">Comissão</th>
+					<th scope="col">Descrição</th>
+					<th scope="col">Site do programa</th>
+				</tr>
+			</thead>
+			<tbody>
 
-			<div class="col">
-				<div class="card shadow">
-					<div class="card-header border-0">
-						<h3 class="mb-0">Lista de Afiliados</h3>
-					</div>
-					<div class="table-responsive">
-						<table class="table align-items-center table-flush">
-							<thead class="thead-light">
-								<tr>
-									<th scope="col">Logo</th>
-									<th scope="col">Empresa</th>
-									<th scope="col">Comissão</th>
-									<th scope="col">Descrição</th>
-									<th scope="col">Site do programa</th>
-
-								</tr>
-							</thead>
-							<tbody>
-
-								{% for affiliate in get_affiliate %}
-
-								<tr>
-									<th scope="row">
-										<div class="media align-items-center">
-											<a href="{{affiliate.website_affiliate}}" class="avatar rounded-circle mr-3">
-												<img src="{{affiliate.photo_affiliate.url}}">
+				{% for affiliate in get_affiliate %}
+				<tr>
+					<th scope="row">
+						<a href="{{affiliate.website_affiliate}}" class="avatar rounded-circle mr-0">
+							<img src="{{affiliate.photo_affiliate.url}}">
                         </a>
-                        <div class="media-body">
-                          <span class="mb-0 text-sm"></span>
-                        </div>
-                      </div>
-                    </th>
-                    <td>
-                   {{affiliate.name_affiliate}}
-                    </td>
-                    <td>
-                      <span class="badge badge-dot mr-4">
-                        <i class="bg-warning"></i> 
-                         {{affiliate.commission_affiliate}}
-                   
-                      </span>
-                    </td>
-                    <td>
-                      {{affiliate.category_affiliate}}
-                    </td>
-                    <td>
-                      <a href="{{affiliate.website_affiliate}}"><span class="badge badge-dot mr-4">
-                        <i class="bg-warning"></i> 
-                       {{affiliate.website_affiliate}} </span>
-                    </td>
-                    
-                  </tr>
+      </th>
+      <td>{{affiliate.name_affiliate}}</td>
+      <td>  {{affiliate.commission_affiliate}}</td>
+      <td> {{affiliate.category_affiliate}}</td>               
+       <td> <a href="{{affiliate.website_affiliate}}"><span class="badge badge-dot mr-0">{{affiliate.website_affiliate}}</span></a></td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+    </tr>
+    {% endfor %}
+    
+  </tbody>
+</table>
+    
+<br>
 
-{% endfor %}
 
-                </tbody>
-              </table>
+	</div>
+  </div>
+
+  <div>
+
+ 
+
+    </div>
+
+   <article class="mb-4">
+	<div class="container">
+		<div class="row gx-4 gx-lg-5 justify-content-center">
+			<div class="col-md-10">
+				<h1 class="section-heading">Marketing de Afiliados [Explicado]: {{post.title}}</h1>
+				<img class="card-img-top" src="{{ post.photo_title.url }}" alt="{{post.title}}">
+
+<h2> {{post.subheading1}} </h2>
+                      
+                        <p> {{post.body1|linebreaks}} </p>
+                        <h2 class="section-heading">{{post.subheading2}}</h2>
+                        <img class="card-img-top" src="{{ post.photo_body1.image_url|default_if_none:'' }}" alt="">
+                        
+                        
+                        <p>{{post.body2|linebreaks}}</p>
+                        <blockquote class="blockquote"></blockquote>
+                         
+                        <h2 class="section-heading">{{post.subheading3}}</h2>
+                        <img class="card-img-top" src="{{ post.photo_body2.image_url.url|default_if_none:'' }}" alt="">
+                        <p>{{post.body3|linebreaks}}</p>
+                        
+                        <span class="caption text-muted"></span>
+                         <img class="card-img-top" src="{{ post.photo_body3.image_url.url|default_if_none:'' }}" alt="">
+                        <p class="section-heading">{{post.conclusion|linebreaks }}</p>
+                        
+                          <h4>- Publicado em: {{post.created}} -</h4>
+                          <h4>Quer saber mais? Confira nosso 
+                          <a href="{% url 'blog:' %}"<h5>Blog </h5> </a>
+                            
+                        </p>
+                    </div>
+                </div>
             </div>
+        </article>
+
 
 
 {% endblock %}

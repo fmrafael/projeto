@@ -1,17 +1,15 @@
-
-{% extends "blog/base.html" %}
-
-{% block title %} DIGITIMES - Ferramentas essenciais para negócios online {% endblock %}
-
+ {% extends "blog/base.html" %} {% block title %} DIGITIMES - Ferramentas essenciais para negócios online {% endblock %}
 {% block content %}
 
 <div class="container mt-5 mb-3">
-    <div class="row">
-        <div class="col-md-4">
-            <div class="card p-3 mb-2">
-                <div class="d-flex justify-content-between">
-                    <div class="d-flex flex-row align-items-center">
-                        <div class="icon"> <i class="bx bx-abacus"></i> </div>
+  <div class="row">
+  <h1> Produtividade digital para quem tem pressa!</h1> </div>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="card p-3 mb-2">
+				<div class="d-flex justify-content-between">
+					<div class="d-flex flex-row align-items-center">
+						<div class="icon"> <i class="bx bx-abacus"></i> </div>
                         <div class="ms-2 c-details">
                             <h6 class="mb-0"> Blogs e tutoriais grátis</h6> <span> Hoje!</span>
                         </div>
@@ -19,7 +17,7 @@
                     <div class="badge"> <span>Blog</span> </div>
                 </div>
                 <div class="mt-5">
-                    <h3 class="heading">Ferramentas essenciais para negócios online - <br>Blogs e Tutoriais</h3>
+                   <a href="{% url 'blog:' %}"><h3 class="heading">Ferramentas essenciais para negócios online - <br>Blogs e Tutoriais</h3></a>
                     <div class="mt-5">
                         <div class="progress">
                             <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
@@ -41,7 +39,7 @@
                     <div class="badge"> <span>Jurídico</span> </div>
                 </div>
                 <div class="mt-5">
-                    <h3 class="heading">Gerador de Políticas - <br>Privacidade, LGPD, Cookies, Termos e Condições e outros (em breve)</h3>
+                    <h3 class="heading">Gerador de Políticas  <br>Privacidade, LGPD, Cookies, Termos e Condições e outros (em breve)</h3>
                     <div class="mt-5">
                         <div class="progress">
                             <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
@@ -85,8 +83,8 @@
                     </div>
                     <div class="badge"> <span>Marketing</span> </div>
                 </div>
-                <div class="mt-5">
-                    <h3 class="heading">Marketing de afiliados e<br>Publicidade nativa</h3>
+                <div class="mt-5"><a href="{% url 'affiliate' %}">
+                    <h3 class="heading">Marketing de afiliados e<br>Publicidade nativa</h3></a>
                     <div class="mt-5">
                         <div class="progress">
                             <div class="progress-bar" role="progressbar" style="width: 100%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>

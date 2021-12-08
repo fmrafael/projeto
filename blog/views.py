@@ -6,7 +6,7 @@ from .models import Post, TableAffiliate
 class PostListView(ListView):
   queryset = Post.objects.filter(status=1).order_by('-created')
   model = Post
-  template_name = "blog/post_list.html"
+#  template_name = "blog/post_list.html"
 
 class PostDetailView(DetailView):
   model = Post
@@ -23,5 +23,6 @@ def policy_view(request, *args, **kwargs):
 
 def affiliate_view(request, *args, **kwargs):
   get_affiliate = TableAffiliate.objects.all()
-  return render(request, "blog/affiliate.html", {"get_affiliate": get_affiliate} )
+  post = Post.objects.get(pk=8)
+  return render(request, "blog/affiliate.html", {"get_affiliate": get_affiliate, "post":post,} )
 

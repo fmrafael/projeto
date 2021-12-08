@@ -1,39 +1,33 @@
-{% extends "blog/base.html" %}
-
-
-
-
-{% block title %}  {% endblock %}
-
-{% block content %}
-
-
+{% extends "blog/base.html" %} {% block title %} {{post.title}} {% endblock %} {% block content %}
 
 <article class="mb-4">
-  <div class="container">
-          
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10">
-<h2 class="section-heading">{{post.title}}</h2>
-<img class="card-img-top" src="{{ post.photo_title.url }}" alt="Card image cap">
+	<div class="container">
+		<div class="row gx-4 gx-lg-5 justify-content-center">
+			<div class="col-md-10">
+				<h1 class="section-heading">{{post.title}}</h1>
+				<img class="card-img-top" src="{{ post.photo_title.url }}" alt="{{post.title}}">
 
-
+<h2> {{post.subheading1}} </h2>
                       
-                        <p> {{post.body1}} </p>
-                        <h3> {{post.subheading1}} </h3>
-                        <img src="{{ photo_body1.image_url|default_if_none:'' }}"" alt="">
-                        <h3 class="section-heading">{{post.subheading2}}</h3>
-                        <img class="card-img-top" src="{{ photo_body2.image_url|default_if_none:'' }}" alt="">
-                        <p>{{post.body2}}</p>
+                        <p> {{post.body1|linebreaks}} </p>
+                        <h2 class="section-heading">{{post.subheading2}}</h2>
+                        <img class="card-img-top" src="{{ post.photo_body1.image_url|default_if_none:'' }}" alt="">
+                        
+                        
+                        <p>{{post.body2|linebreaks}}</p>
                         <blockquote class="blockquote"></blockquote>
                          
-                        <h3 class="section-heading">{{post.subheading3}}</h3>
-                        <img class="card-img-top" src="{{ photo_body3.image_url|default_if_none:'' }}" alt="">
-                        <p>{{post.body3}}</p>
+                        <h2 class="section-heading">{{post.subheading3}}</h2>
+                        <img class="card-img-top" src="{{ post.photo_body2.image_url.url|default_if_none:'' }}" alt="">
+                        <p>{{post.body3|linebreaks}}</p>
                         
                         <span class="caption text-muted"></span>
-                        <h2 class="section-heading">{{post.conclusion}}</h2>
-                          <p> {{post.created}} </p>
+                         <img class="card-img-top" src="{{ post.photo_body3.image_url.url|default_if_none:'' }}" alt="">
+                        <p class="section-heading">{{post.conclusion|linebreaks }}</p>
+                        
+                          <h4>- Publicado em: {{post.created}} -</h4>
+                          <h4>Links adicionais:</h4><a href= "{% url 'affiliate' %}">
+                          <h5>{{post.post_links}}</h5> </a>
                             
                         </p>
                     </div>
@@ -43,4 +37,3 @@
 
 
 {% endblock %}
-
