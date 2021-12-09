@@ -1,0 +1,33 @@
+{% extends "blog/base.html" %}
+
+{% block content %}
+
+<div class="container mt-5 mb-3">
+  <div class="row">
+  <h1> Insira um tema para o google retornar com os termos mais buscados</h1> </div>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+
+
+<div>
+    {% for i in response %}
+    {{ search_key }}
+    
+    {{i}}
+<table>
+    <td> {% endfor %} </td>
+    
+    </table>
+    </div>
+
+</div>
+</div>
+<h1> </h1>
+
+<h1> </h1> 
+{% endblock %}
+
