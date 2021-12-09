@@ -26,10 +26,10 @@ urlpatterns = [
   path('', home_view, name='home'),
     path('admin/', admin.site.urls),
     path("blog/", include("blog.urls", namespace="blog")),
-    #path("", include("blog.urls", namespace="hometemp")),
     path('policy', policy_view, name='policy'),
     path("blog/affiliate", affiliate_view, name="affiliate"),
     path("apis/search_key", SearchKeyView.as_view()),
+    path("apis/", include("apis.urls", namespace="apis")),
 
 
      

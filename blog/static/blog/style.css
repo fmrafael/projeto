@@ -65,6 +65,8 @@ p { font-family: 'Helvetica Neue',sans-serif; font-size: 25px; font-weight: 500;
     align-items: center
 }
 
+ 
+
 .progress {
     height: 10px;
     border-radius: 10px
