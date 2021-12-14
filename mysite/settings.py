@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
-    'apis.apps.ApisConfig'
+    'apis.apps.ApisConfig',
+    'crispy_forms'
 ]
 
 MIDDLEWARE = [
@@ -117,6 +118,7 @@ USE_L10N = True
 USE_TZ = True
 
 
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
@@ -133,3 +135,4 @@ ALLOWED_HOSTS = ['*']
 X_FRAME_OPTIONS = '*'
 
 #incluir bootstrap
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
