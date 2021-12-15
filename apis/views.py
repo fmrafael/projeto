@@ -6,16 +6,17 @@ from blog.models import Post
 from django.http import HttpResponseRedirect
 
 
-post = Post.objects.get(pk=9)
-
 class SearchKeyView(TemplateView):
+  
   template_name = 'apis/search_key.html'
   
   def get(self, request):
+    post = Post.objects.get(pk=9)
     form = SearchKeyForm()
     return render(request, self.template_name, {'form':form, 'post':post})
 
   def post(self, request):
+    post = Post.objects.get(pk=9)
     form = SearchKeyForm(request.POST)
     if form.is_valid():
       search_key = form.cleaned_data['search_key']
@@ -36,16 +37,23 @@ class SearchKeyView(TemplateView):
         return HttpResponseRedirect(self.request.path_info)
     
 class WhatsappView(TemplateView):
+  post = Post.objects.get(pk=11)
+ 
   template_name = 'apis/whatsapp.html'
-  post = Post.objects.get(pk=9)
+  
   def get(self, request):
+     post = Post.objects.get(pk=11)
      form = WhatsappForm()
      return render(request, self.template_name, {'form':form, 'post':post})
+     
 
   def post(self, request):
+    post = Post.objects.get(pk=11)
     form = WhatsappForm(request.POST)
     if form.is_valid():
      whatsapp = form.cleaned_data['cell']
-     whats_link = f"https://api.whatsapp.com/send?phone={whatsapp}"
-     return render(request, self.template_name, {'whats_link':whats_link,'post':post})
+     
+     whats_url = f'https://api.whatsapp.com/send?phone={whatsapp}'
+     whats_link = f'<i class="bx bxl-whatsapp bx-lg" style= "color:#25D366;"</i> https://api.whatsapp.com/send?phone={whatsapp} <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>'
+     return render(request, self.template_name, {'whats_link':whats_link,'post':post, 'whats_url':whats_url})
   
