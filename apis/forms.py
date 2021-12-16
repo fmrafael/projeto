@@ -5,5 +5,5 @@ class SearchKeyForm(forms.Form):
 
 
 class WhatsappForm(forms.Form):
-  cell = forms.CharField(label = 'NÚMERO DO CELULAR', max_length = 16, required = True, strip = True, widget=forms.TextInput(attrs={'placeholder': '(DDD) 0 0000-0000'}))
+  cell = forms.CharField(label = 'NÚMERO DO CELULAR', max_length = 18, required = True, strip = True, widget=forms.TextInput(attrs={'placeholder': '(00) 000000-0000'}))
 

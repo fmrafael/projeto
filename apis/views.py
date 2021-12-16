@@ -52,8 +52,9 @@ class WhatsappView(TemplateView):
     form = WhatsappForm(request.POST)
     if form.is_valid():
      whatsapp = form.cleaned_data['cell']
-     
-     whats_url = f'https://api.whatsapp.com/send?phone={whatsapp}'
-     whats_link = f'<i class="bx bxl-whatsapp bx-lg" style= "color:#25D366;"</i> https://api.whatsapp.com/send?phone={whatsapp} <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>'
+     whatsapp = whatsapp.replace('(','').replace('-','').replace(')','')
+     whatsapp = whatsapp.replace(" ","")
+     whats_url = f'https://api.whatsapp.com/send?phone=+55{whatsapp}'
+     whats_link = f'<i class="bx bxl-whatsapp bx-lg" style= "color:#25D366;"</i> https://api.whatsapp.com/send?phone=+55{whatsapp} <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>'
      return render(request, self.template_name, {'whats_link':whats_link,'post':post, 'whats_url':whats_url})
   
