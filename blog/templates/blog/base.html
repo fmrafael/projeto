@@ -1,9 +1,6 @@
 {% load static %}
-
 <!DOCTYPE html>
-
 <html>
-
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,25 +9,22 @@
 
 	<link rel="stylesheet" href="{% static 'blog/style.css' %}" />
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
-
-
 	<title>DIGITIMES - Ferramentas essenciais para negócios online</title>
 </head>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-	<div class="container">
+	<div class="container-fluid offset-md-1">
 		<a class="navbar-brand" href="{% url 'home' %}">DIGITIMES</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarsExample07">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
               <a class="nav-link" href="{% url 'blog:' %}">Blog e Tutoriais <span class="sr-only"></span></a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="{% url 'affiliate' %}">Marketing afiliados<span class="sr-only"></span></a>
+              <a class="nav-link" href="{% url 'affiliate' %}">Canais de venda e publicidade<span class="sr-only"></span></a>
             </li>
             <li class="nav-item active">
               <a class="nav-link" href="{% url 'apis:search_key' %}">Palavra-chave<span class="sr-only"></span></a>
@@ -42,21 +36,28 @@
         </div>
       </div>
     </nav>
- 
-
 <body>
-	  
-	<main> {%block content %} {% endblock content %} </main>
+	<main> 
+<div class="container-fluid">
+
+	<div class="row">
+
+
+		<div class="col-8 offset-md-1">
+    
+     {%block content %} {% endblock content %} 
+     
+     
+     
  <div class="footer-basic">
-       
        <section class="footers bg-light pt-5 pb-3">
-   <div class="container pt-5">
+   <div class="container pt-6">
        <div class="row">
            <div class="col-xs-12 col-sm-6 col-md-4 footers-one">
     		    <div class="footers-logo">
     		        <h5>Sobre nós</h5>
     		    </div>
-    		    <div class="footers-info mt-3">
+    		    <div class="footers-info mt-6">
     		        <p>DIGITIMES é um site gratuito de recursos de Marketing e Negócios Online. A DIGITIMES foi fundada em 2021. O principal objetivo deste site é fornecer tutoriais, dicas, cursos, ferramentas e outros recursos de qualidade que permitam a qualquer pessoa trabalhar online e dominar o marketing digital com base em estudos de caso reais e pesquisas aprofundadas.</p>
     		    </div>
     		     
@@ -77,16 +78,16 @@
     			 <li><a href="{% url 'policy' %}"></a></li>
     			</ul>
     		</div>
-    	   
-    		
+
        </div>
    </div>
 </section>
     </div>
     <!-- Latest compiled and minified JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
-</script>
-<script src="{% static 'apis.js' %}"></script>
+    
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
 
 </body>
 

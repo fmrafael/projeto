@@ -1,11 +1,16 @@
-{% extends "blog/base.html" %} {% load crispy_forms_tags %} {% block title%} {% endblock %} {% block content %}
+{% extends "blog/base.html" %} {% load crispy_forms_tags %} 
+{% load static %}
+
+{% block title%} {% endblock %} {% block content %}
+
+<h1> Gerador de botão de whatsapp grátis <i class="bx bxl-whatsapp"></i></h1>
+			<h3 class="font-weight-light"> Acesse facilmente o contato dos visitantes do seu site diretamente pelo link do Whatsapp</h3>
+
 
 <div class="container mt-5 mb-6">
 
 	<div class="row">
 
-		<h1> Gerador de botão de whatsapp grátis <i class="bx bxl-whatsapp"></i></h1>
-		<h3>Acesse facilmente o contato dos visitantes do seu site diretamente pelo link do Whatsapp</h3>
     <p class="fs-7 col-md-10">Você cria um botão de WhatsApp, instala no seu site e fica pronto para receber mensagens de pessoas interessadas nas suas ofertas</p>
 	</div>
 
@@ -90,4 +95,7 @@
             </div>
         </article>
 
+
+<script src="{% static 'apis.js' %}"></script>
 {% endblock %}
+

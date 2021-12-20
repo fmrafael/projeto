@@ -10,4 +10,4 @@ urlpatterns = [
   #path('blog/<int:pk>', views.PostDetailView.as_view(), name='post-detail'),
    
   
-]
+] 

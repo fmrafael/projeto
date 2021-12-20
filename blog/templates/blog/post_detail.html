@@ -1,8 +1,7 @@
 {% extends "blog/base.html" %} {% block title %} {{post.title}} {% endblock %} {% block content %}
 
-<article class="mb-4">
-	<div class="container">
-		<div class="row gx-4 gx-lg-5 justify-content-center">
+<article>
+
 			<div class="col-md-10">
 				<h1 class="section-heading">{{post.title}}</h1>
 				<img class="card-img-top" src="{{ post.photo_title.url }}" alt="{{post.title}}">
@@ -11,18 +10,26 @@
                       
                         <p> {{post.body1|linebreaks}} </p>
                         <h2 class="section-heading">{{post.subheading2}}</h2>
-                        <img class="card-img-top" src="{{ post.photo_body1.image_url|default_if_none:'' }}" alt="">
+                        {% if post.photo_body1 %}
+                        <img class="card-img-top" src="{{ post.photo_body1.url }}" alt="">
+                        {% else %}
+                        {% endif %}
                         
                         
                         <p>{{post.body2|linebreaks}}</p>
                         <blockquote class="blockquote"></blockquote>
                          
                         <h2 class="section-heading">{{post.subheading3}}</h2>
-                        <img class="card-img-top" src="{{ post.photo_body2.image_url.url|default_if_none:'' }}" alt="">
+                         {% if post.photo_body2 %}
+                        <img class="card-img-top" src="{{ post.photo_body2.url }}" alt="">
+                         {% else %}
+                        {% endif %}
                         <p>{{post.body3|linebreaks}}</p>
                         
                         <span class="caption text-muted"></span>
-                         <img class="card-img-top" src="{{ post.photo_body3.image_url.url|default_if_none:'' }}" alt="">
+                        
+                         
+                       
                         <p class="section-heading">{{post.conclusion|linebreaks }}</p>
                         
                           <h4>- Publicado em: {{post.created}} -</h4>
@@ -31,8 +38,7 @@
                             
                         </p>
                     </div>
-                </div>
-            </div>
+            
         </article>
 
 

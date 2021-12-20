@@ -31,7 +31,4 @@ urlpatterns = [
     path("", include("apis.urls", namespace="apis")),
    
 
-
-     
-    
-] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
