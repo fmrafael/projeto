@@ -1,1 +1,138 @@
-django
+absl-py==0.13.0
+aiohttp==3.7.4.post0
+antlr4-python3-runtime==4.9.2
+asgiref @ file:///home/runner/.cache/pypoetry/artifacts/3f/98/4d/6a033cf821463ecb706293158c40bcde94048c2f69eee1ba0354d1b42f/asgiref-3.4.1-py3-none-any.whl
+astunparse==1.6.3
+async-timeout==3.0.1
+attrs==21.2.0
+backports.entry-points-selectable==1.1.0
+CacheControl==0.12.6
+cachetools==4.2.2
+cachy==0.3.0
+certifi @ file:///home/runner/.cache/pypoetry/artifacts/77/74/3e/daf57610ff13227e3b3f50a78487055f6ac94cc9363abd2463be34c5e9/certifi-2021.10.8-py2.py3-none-any.whl
+cffi==1.14.6
+chardet==4.0.0
+charset-normalizer @ file:///home/runner/.cache/pypoetry/artifacts/99/22/e5/b5eac4f2acf7661dde8c8696353398c9c351c2ac103e9028675346d57f/charset_normalizer-2.0.9-py3-none-any.whl
+cleo==0.8.1
+click==8.0.1
+clikit==0.6.2
+coloredlogs @ file:///home/runner/.cache/pypoetry/artifacts/03/ca/73/051bec50e04a197292790915c2025931dfee11bd7fd7d95cffcb0d5927/coloredlogs-15.0.1-py2.py3-none-any.whl
+crashtest==0.3.1
+cryptography==3.4.8
+cs50==7.0.2
+cycler==0.10.0
+debugpy==1.2.1
+dill @ file:///home/runner/.cache/pypoetry/artifacts/28/60/d3/32828bed02c4d7c32349419de5acbc87826c39d627804affa9a357ca4b/dill-0.3.4-py2.py3-none-any.whl
+distlib==0.3.2
+Django @ file:///home/runner/.cache/pypoetry/artifacts/9d/fb/80/b18acb72f50348fedaaa3367ad6e061fa47c060e50ad7646e6902211ea/Django-3.2.10-py3-none-any.whl
+django-crispy-forms @ file:///home/runner/.cache/pypoetry/artifacts/6c/d0/bf/5e9e23a2674094c5780568faafcb810be7fe44d0c9b354007fabb77684/django_crispy_forms-1.13.0-py3-none-any.whl
+docopt==0.6.2
+et-xmlfile @ file:///home/runner/.cache/pypoetry/artifacts/54/fd/16/7449f65d172d97e10b198adf308f9254ed6c37e55795a24184502b4883/et_xmlfile-1.1.0-py3-none-any.whl
+filelock==3.0.12
+Flask==2.0.1
+funcsigs==1.0.2
+future==0.18.2
+gast==0.3.3
+glfw==2.2.0
+google-auth==1.35.0
+google-auth-oauthlib==0.4.6
+google-pasta==0.2.0
+graphviz @ file:///home/runner/.cache/pypoetry/artifacts/74/e5/bb/a503bea65970de1a600981a29d147aefb6e1c8b5ae9979e43b3859abe0/graphviz-0.19.1-py3-none-any.whl
+greenlet==1.1.1
+grpcio==1.40.0
+h5py==2.10.0
+html5lib==1.1
+humanfriendly @ file:///home/runner/.cache/pypoetry/artifacts/c6/d0/8b/0502b610014b091b5c0c004b698b5d530047297665b72d026c0ebf1dec/humanfriendly-10.0-py2.py3-none-any.whl
+idna @ file:///home/runner/.cache/pypoetry/artifacts/f7/09/c9/8e80952436ff87855ddff4891a35ecf913b2b5dc97911f02a070ff2b1f/idna-3.3-py3-none-any.whl
+importlib-metadata==3.10.1
+itsdangerous==2.0.1
+jedi==0.15.2
+jeepney==0.7.1
+Jinja2==3.0.1
+joblib==1.0.1
+Keras-Preprocessing==1.1.2
+keyring==21.8.0
+kiwisolver==1.3.2
+lockfile==0.12.2
+Markdown==3.3.4
+MarkupSafe==2.0.1
+matplotlib==3.4.3
+more-itertools @ file:///home/runner/.cache/pypoetry/artifacts/ef/04/3c/cde360772e23ed0a5f61cdbbe79d28f3a9680c45072b4fb9c5eb1ecd00/more_itertools-8.12.0-py3-none-any.whl
+msgpack==1.0.2
+multidict==5.1.0
+multiprocess @ file:///home/runner/.cache/pypoetry/artifacts/ca/0c/50/4fa4087501423c3e6a0e07cf9e4293cb262c98689b0a5da0bcc0ee4148/multiprocess-0.70.12.2-py38-none-any.whl
+nltk==3.6.2
+numpy @ file:///home/runner/.cache/pypoetry/artifacts/85/83/49/a1815a60257e3b8e2934c737e542f3b531690042828aa93ee8e986d5e3/numpy-1.21.1-cp38-cp38-manylinux_2_12_x86_64.manylinux2010_x86_64.whl
+oauthlib==3.1.1
+openpyxl @ file:///home/runner/.cache/pypoetry/artifacts/3c/c6/e8/c6d2e4fd1863f893b22b1b840410ee51a85f5c40d81498bd42a1991185/openpyxl-3.0.9-py2.py3-none-any.whl
+opt-einsum==3.3.0
+packaging==20.9
+pandas @ file:///home/runner/.cache/pypoetry/artifacts/e2/d7/c5/b34cdf6b96bf7a34c87b1154fb0b32d9410464e8283f8cd46b3e56505a/pandas-1.3.5-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+parso==0.5.2
+pastel==0.2.1
+pathos @ file:///home/runner/.cache/pypoetry/artifacts/a4/cb/a0/9ee654c62ee51de0599c6e6674e9119f1e0ac8128efd05cd377bce0609/pathos-0.2.8-py2.py3-none-any.whl
+patsy @ file:///home/runner/.cache/pypoetry/artifacts/2f/83/4f/b90b0cf3390e15237c17f52738e883fa9b154336962504fbbbbce2e73d/patsy-0.5.2-py2.py3-none-any.whl
+pexpect==4.8.0
+Pillow==8.3.2
+pipreqs-amasad==0.4.10
+pkginfo==1.7.1
+platformdirs==2.3.0
+pluggy==0.13.1
+poetry==1.1.6
+poetry-core==1.0.4
+pox @ file:///home/runner/.cache/pypoetry/artifacts/8c/ba/59/72c66c32f8e0930a9075171b3ddd9621f9d07d19e23ac4956584991042/pox-0.3.0-py2.py3-none-any.whl
+ppft @ file:///home/runner/.cache/pypoetry/artifacts/98/a9/8a/ac719ff4f3a24d0965b897034abf203ea83a7ba9fcdbf0323e0c12e6a7/ppft-1.6.6.4-py3-none-any.whl
+protobuf==3.17.3
+psutil @ file:///home/runner/.cache/pypoetry/artifacts/47/6f/b2/4d7c82a7efe4a37ca9b469182702366f314307a80f4db8c9b581afe3bc/psutil-5.8.0-cp38-cp38-manylinux2010_x86_64.whl
+ptyprocess==0.7.0
+pyasn1==0.4.8
+pyasn1-modules==0.2.8
+pycparser==2.20
+pyflakes==2.1.1
+pygame==2.0.1
+pylev==1.4.0
+PyOpenGL==3.1.5
+pyparsing==2.4.7
+pyquil==1.9.0
+python-dateutil==2.8.2
+python-jsonrpc-server==0.3.2
+python-language-server==0.31.10
+pytz @ file:///home/runner/.cache/pypoetry/artifacts/07/c1/43/6f22a533e7bc5e277f10b4c6033e936ff7bbeb6464e5f27dbfb6c641d7/pytz-2021.3-py2.py3-none-any.whl
+pyxel @ git+https://github.com/amasad/pyxel@8bcc2266b2fbb65f72ad686952de3838971c136e
+referenceqvm==0.3
+regex==2021.8.28
+replit==3.2.4
+requests==2.26.0
+requests-oauthlib==1.3.0
+requests-toolbelt==0.9.1
+rope==0.18.0
+rsa==4.7.2
+sas7bdat @ file:///home/runner/.cache/pypoetry/artifacts/f9/87/1f/138517eaf32d7233c7a340031b1c09cb74221650adc2dee7ee2720e268/sas7bdat-2.2.3.tar.gz
+scipy @ file:///home/runner/.cache/pypoetry/artifacts/5c/38/63/9194f23ecdc809e85ad7f3d3c8b25f19557f556617586461090f6039c2/scipy-1.6.1-cp38-cp38-manylinux1_x86_64.whl
+SecretStorage==3.3.1
+shellingham==1.4.0
+six==1.16.0
+sounddevice==0.4.2
+SQLAlchemy==1.4.23
+sqlparse @ file:///home/runner/.cache/pypoetry/artifacts/bd/30/d0/940567a036c6ea57abe7098acbd123f8c8985ccc27713365ae80d28f89/sqlparse-0.4.2-py3-none-any.whl
+statsmodels @ file:///home/runner/.cache/pypoetry/artifacts/92/88/d6/68815bb9017bc0371bb58434a3d4791f3457a0f2ad66cc73f547b8351e/statsmodels-0.13.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
+tensorboard==2.2.2
+tensorboard-plugin-wit==1.8.0
+tensorflow-cpu @ https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow_cpu-2.2.0-cp38-cp38-manylinux2010_x86_64.whl
+tensorflow-estimator==2.2.0
+termcolor==1.1.0
+toml==0.10.2
+tomlkit==0.7.2
+tqdm==4.62.2
+typing-extensions==3.7.4.3
+ujson==1.35
+urllib3 @ file:///home/runner/.cache/pypoetry/artifacts/d8/12/e2/1b499db5e41e88fd0f31d0e056a4dc7b53824f63f027fffc1702969c57/urllib3-1.26.7-py2.py3-none-any.whl
+virtualenv==20.7.2
+webencodings==0.5.1
+Werkzeug==2.0.1
+wrapt==1.12.1
+xlrd @ file:///home/runner/.cache/pypoetry/artifacts/e0/f8/18/f9552eedbee770b4a679c766f9fa8531926b388e16b4219266f6b59006/xlrd-2.0.1-py2.py3-none-any.whl
+yapf==0.31.0
+yarg==0.1.9
+yarl==1.6.3
+zipp==3.4.1
